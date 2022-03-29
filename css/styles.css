@@ -161,10 +161,11 @@ img {
   display: flex;
 
   list-style: none;
-  /* outline: 1px solid tomato; */
+  color: var(--secondary-font-color);
 }
-
 .auth-nav-link {
+  display: flex;
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -172,15 +173,27 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--secondary-font-color);
+  color: currentColor;
   text-decoration: none;
 }
-.auth-nav-link:hover,
-.auth-nav-link:focus {
+.auth-nav-list .auth-nav-link:hover,
+.auth-nav-list .auth-nav-link:focus {
   color: var(--accent-color);
 }
+/* .auth-nav-link:hover .auth-nav-icon,
+.auth-nav-link:focus .auth-nav-icon {
+  fill: var(--accent-color);
+} */
+/* .auth-nav-link:hover,
+.auth-nav-link:focus {
+  color: var(--accent-color);
+} */
 .mail {
   margin-right: 50px;
+}
+.auth-nav-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* HERO */
@@ -241,11 +254,18 @@ img {
   display: flex;
   list-style: none;
 }
-.features-link {
+.features-item {
   flex-basis: 270px;
 }
-.features-link:not(:last-child) {
+.features-item:not(:last-child) {
   margin-right: 30px;
+}
+.features-icon-wrapper {
+  padding: 25px 100px;
+  max-width: 270px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--dark-secondary-background-color);
 }
 .features-title {
   margin-bottom: 10px;
