@@ -27,7 +27,8 @@
   --dark-secondary-background-color: #f5f4fa;
   /* Цвет фона карточек */
   --card-background-color: #ffffff;
-
+  /* Основной цвет иконок соц.сетей */
+  --icon-color: #afb1b8;
   /* PORTFOLIO */
 
   /* Зазор между карточками */
@@ -308,7 +309,7 @@ img {
   margin-right: 30px;
 }
 .team-text-container {
-  padding: 30px 0;
+  padding: 30px 32px;
 }
 .team-subtitle {
   margin-bottom: 10px;
@@ -323,31 +324,39 @@ img {
 .team-text {
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
   text-align: center;
   color: var(--secondary-font-color);
 }
+
+/* SOCIALS */
+
+.socials-list {
+  display: flex;
+}
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+.socials-link:hover .socials-icon {
+  fill: red;
+}
 .socials-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
   background-repeat: no-repeat;
   background-size: 20px;
   background-position: center;
   border-radius: 50%;
+  outline: 1px dashed rebeccapurple;
 }
-.socials-link-instagram {
-  background-image: url(../images/icons/instagram.svg);
+.socials-icon {
+  fill: var(--icon-color);
 }
-.socials-link-twitter {
-  background-image: url(../images/icons/twitter.svg);
-}
-.socials-link-facebook {
-  background-image: url(../images/icons/facebook.svg);
-}
-.socials-link-linkedin {
-  background-image: url(../images/icons/linkedin.svg);
-}
+
 /* FOOTER */
 
 .footer {
