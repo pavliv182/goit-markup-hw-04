@@ -337,9 +337,6 @@ img {
 .socials-item:not(:last-child) {
   margin-right: 10px;
 }
-.socials-link:hover .socials-icon {
-  fill: red;
-}
 .socials-link {
   display: flex;
   justify-content: center;
@@ -351,12 +348,19 @@ img {
   background-size: 20px;
   background-position: center;
   border-radius: 50%;
-  outline: 1px dashed rebeccapurple;
+}
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
 }
 .socials-icon {
   fill: var(--icon-color);
 }
-
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--card-background-color);
+  /* transform: scale(1.2); */
+}
 /* FOOTER */
 
 .footer {
